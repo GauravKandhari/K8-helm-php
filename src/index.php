@@ -1,7 +1,7 @@
 <?php
 echo "Inside Minikube with MySQL <br>";
 echo "Hello";
-$conn = new mysqli("mysql-service", "root", "rElayrmy", "mydb");
+$conn = new mysqli("mysql.default.svc.cluster.local:3306", "testuser", "tEstUsEr", "mydb");
 // Check connection
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
